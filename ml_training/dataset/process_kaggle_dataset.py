@@ -7,10 +7,17 @@ the final dataset to ml_training/dataset/kaggle_paired_dataset.csv.
 """
 
 import os
+import sys
 import csv
 import json
 import random
 import kagglehub
+
+if sys.stdout.encoding != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
 
 # Industry-standard Job Descriptions for each Kaggle resume category
 CATEGORY_JDS = {
@@ -54,9 +61,9 @@ def clean_text(text):
     return cleaned[:3000] # Trim to first 3000 chars for clean embeddings
 
 def download_and_process(output_dir="ml_training/dataset", max_samples_per_cat=10):
-    print("⏳ Downloading 'snehaanbhawal/resume-dataset' via kagglehub...")
+    print("[INFO] Loading 'snehaanbhawal/resume-dataset' via kagglehub...")
     dataset_path = kagglehub.dataset_download("snehaanbhawal/resume-dataset")
-    print(f"✅ Kaggle dataset downloaded to: {dataset_path}")
+    print(f"[SUCCESS] Kaggle dataset path: {dataset_path}")
 
     # Locate the CSV file inside the downloaded directory
     csv_file = None
@@ -71,7 +78,7 @@ def download_and_process(output_dir="ml_training/dataset", max_samples_per_cat=1
     if not csv_file:
         raise FileNotFoundError(f"Could not find a CSV file inside {dataset_path}")
 
-    print(f"📂 Found resume CSV file: {csv_file}")
+    print(f"[FOUND] Resume CSV file: {csv_file}")
 
     # Read and group resumes by Category
     resumes_by_cat = {}
@@ -89,10 +96,10 @@ def download_and_process(output_dir="ml_training/dataset", max_samples_per_cat=1
                     "resume_text": cleaned
                 })
 
-    print(f"📊 Extracted resumes across {len(resumes_by_cat)} categories:")
+    print(f"[STATS] Extracted resumes across {len(resumes_by_cat)} categories:")
     for cat, list_items in resumes_by_cat.items():
         if cat in CATEGORY_JDS:
-            print(f"  • {cat}: {len(list_items)} resumes")
+            print(f"  - {cat}: {len(list_items)} resumes")
 
     # Generate paired dataset (positive, partial, and negative pairs)
     paired_data = []
@@ -150,7 +157,7 @@ def download_and_process(output_dir="ml_training/dataset", max_samples_per_cat=1
     with open(out_json, mode="w", encoding="utf-8") as f:
         json.dump(paired_data, f, indent=2, ensure_ascii=False)
 
-    print(f"\n🎉 Successfully created paired Kaggle dataset with {len(paired_data)} samples!")
+    print(f"\n[DONE] Successfully created paired Kaggle dataset with {len(paired_data)} samples!")
     print(f"CSV saved to:  {out_csv}")
     print(f"JSON saved to: {out_json}")
     return paired_data
