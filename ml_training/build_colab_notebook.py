@@ -1,0 +1,565 @@
+#!/usr/bin/env python3
+"""
+Generates the interactive Google Colab notebook for training the JD-Resume Matching Model.
+"""
+
+import json
+import os
+
+def create_notebook():
+    cells = [
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "# 🚀 Fine-Tuning a Sentence-Transformer Model for JD & Resume Matching\n",
+                "### TalentAI Studio • Production ML Training Guide\n",
+                "\n",
+                "Welcome! In this Google Colab notebook, you will learn how to fine-tune a state-of-the-art **Sentence-Transformers Bi-Encoder** (`all-MiniLM-L6-v2`) on Job Description (JD) and Resume pairs to predict match scores and rank candidates.\n",
+                "\n",
+                "---\n",
+                "\n",
+                "### 🧠 Why Bi-Encoders for JD-Resume Matching?\n",
+                "- **Bi-Encoder Architecture:** Encodes the Job Description and the Resume into dense 384-dimensional vector embeddings independently: $\\vec{u} = f(\\text{JD})$ and $\\vec{v} = f(\\text{Resume})$.\n",
+                "- **Lightning-Fast Retrieval:** Matching is computed via Cosine Similarity $\\cos(\\vec{u}, \\vec{v}) = \\frac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\|\\vec{v}\\|}$. This enables sub-millisecond search across thousands of resumes and seamless integration with vector databases like **pgvector** in Supabase!\n",
+                "- **Cost Effective:** Can easily run on a free Google Colab T4 GPU and fine-tune in ~3 minutes.\n",
+                "\n",
+                "---\n",
+                "### ⚙️ Step 0: Ensure GPU is Enabled in Colab\n",
+                "1. Click **Runtime** in the top menu.\n",
+                "2. Select **Change runtime type**.\n",
+                "3. Under *Hardware accelerator*, select **T4 GPU** (or any available GPU).\n",
+                "4. Click **Save**."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# Step 1: Install required libraries\n",
+                "!pip install -q sentence-transformers datasets torch scikit-learn pandas matplotlib seaborn"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# Verify GPU availability\n",
+                "import torch\n",
+                "\n",
+                "print(f\"PyTorch Version: {torch.__version__}\")\n",
+                "if torch.cuda.is_available():\n",
+                "    print(f\"✅ GPU Detected: {torch.cuda.get_device_name(0)}\")\n",
+                "    print(f\"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.2f} GB\")\n",
+                "else:\n",
+                "    print(\"⚠️ No GPU detected. Running on CPU (training will be slower). Please switch to T4 GPU under Runtime > Change runtime type.\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 📂 Step 2: Load or Generate the JD-Resume Dataset\n",
+                "You can either upload `jd_resume_dataset.csv` from your TalentAI Studio project, or run the cell below which auto-downloads or creates the mock dataset so this notebook is completely self-contained!"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import pandas as pd\n",
+                "import json\n",
+                "import os\n",
+                "\n",
+                "# Check if user uploaded jd_resume_dataset.csv\n",
+                "dataset_file = 'jd_resume_dataset.csv'\n",
+                "\n",
+                "if not os.path.exists(dataset_file):\n",
+                "    print(\"Dataset file not found locally. Generating synthetic high-fidelity JD-Resume dataset...\")\n",
+                "    # Auto-generate sample dataset if not uploaded\n",
+                "    synthetic_data = [\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0001\",\n",
+                "            \"job_title\": \"Machine Learning Engineer\",\n",
+                "            \"job_description\": \"We need a Machine Learning Engineer to train transformer models (BERT, GPT) using PyTorch, build vector search systems with FAISS/pgvector, and deploy low-latency FastAPI inference microservices with Docker.\",\n",
+                "            \"candidate_name\": \"Aarav Sharma\",\n",
+                "            \"resume_text\": \"Machine Learning Engineer with 4 years experience. Fine-tuned BERT models in PyTorch for semantic search. Built vector pipelines with pgvector and deployed FastAPI Docker containers handling 5M requests/day.\",\n",
+                "            \"match_score\": 0.94,\n",
+                "            \"label\": \"Strong Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0002\",\n",
+                "            \"job_title\": \"Machine Learning Engineer\",\n",
+                "            \"job_description\": \"We need a Machine Learning Engineer to train transformer models (BERT, GPT) using PyTorch, build vector search systems with FAISS/pgvector, and deploy low-latency FastAPI inference microservices with Docker.\",\n",
+                "            \"candidate_name\": \"Priya Nair\",\n",
+                "            \"resume_text\": \"Data Scientist with 3 years experience building predictive models using Python, TensorFlow, and Scikit-learn. Familiar with FastAPI and Docker. Eager to specialize in NLP and Transformers.\",\n",
+                "            \"match_score\": 0.76,\n",
+                "            \"label\": \"Good Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0003\",\n",
+                "            \"job_title\": \"Machine Learning Engineer\",\n",
+                "            \"job_description\": \"We need a Machine Learning Engineer to train transformer models (BERT, GPT) using PyTorch, build vector search systems with FAISS/pgvector, and deploy low-latency FastAPI inference microservices with Docker.\",\n",
+                "            \"candidate_name\": \"Marcus Vance\",\n",
+                "            \"resume_text\": \"Python backend developer with 3 years building Django REST APIs and managing PostgreSQL databases. Basic experience with Scikit-learn regression models.\",\n",
+                "            \"match_score\": 0.52,\n",
+                "            \"label\": \"Moderate Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0004\",\n",
+                "            \"job_title\": \"Machine Learning Engineer\",\n",
+                "            \"job_description\": \"We need a Machine Learning Engineer to train transformer models (BERT, GPT) using PyTorch, build vector search systems with FAISS/pgvector, and deploy low-latency FastAPI inference microservices with Docker.\",\n",
+                "            \"candidate_name\": \"Emily Watson\",\n",
+                "            \"resume_text\": \"Digital marketer and WordPress content manager with 4 years optimizing landing page conversion, managing client blogs, and running Google Ad campaigns.\",\n",
+                "            \"match_score\": 0.20,\n",
+                "            \"label\": \"Low Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0005\",\n",
+                "            \"job_title\": \"Senior Full-Stack Engineer\",\n",
+                "            \"job_description\": \"Senior Full-Stack Engineer to architect web apps with React, TypeScript, Tailwind CSS, Node.js, Express, and PostgreSQL. Experience with Docker containerization and CI/CD required.\",\n",
+                "            \"candidate_name\": \"Vikram Patel\",\n",
+                "            \"resume_text\": \"Full-Stack Engineer with 5 years experience in React, TypeScript, Tailwind CSS, Node.js, and PostgreSQL. Containerized apps with Docker and configured GitHub Actions CI/CD.\",\n",
+                "            \"match_score\": 0.95,\n",
+                "            \"label\": \"Strong Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0006\",\n",
+                "            \"job_title\": \"Senior Full-Stack Engineer\",\n",
+                "            \"job_description\": \"Senior Full-Stack Engineer to architect web apps with React, TypeScript, Tailwind CSS, Node.js, Express, and PostgreSQL. Experience with Docker containerization and CI/CD required.\",\n",
+                "            \"candidate_name\": \"Chloe Bennett\",\n",
+                "            \"resume_text\": \"MERN stack developer with 3 years experience in MongoDB, Express, React, and Node.js. Proficient with CSS3 and modern UI design. Basic TypeScript knowledge.\",\n",
+                "            \"match_score\": 0.74,\n",
+                "            \"label\": \"Good Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0007\",\n",
+                "            \"job_title\": \"Cloud DevOps Engineer\",\n",
+                "            \"job_description\": \"Cloud DevOps Engineer to manage Kubernetes (EKS) clusters, author Terraform infrastructure as code, build GitHub Actions CI/CD pipelines, and configure Prometheus/Grafana monitoring.\",\n",
+                "            \"candidate_name\": \"Rahul Verma\",\n",
+                "            \"resume_text\": \"Senior DevOps Engineer (CKA certified) with 5 years experience managing multi-region Kubernetes clusters on AWS using Terraform. Automated CI/CD pipelines with GitHub Actions.\",\n",
+                "            \"match_score\": 0.96,\n",
+                "            \"label\": \"Strong Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0008\",\n",
+                "            \"job_title\": \"Cloud DevOps Engineer\",\n",
+                "            \"job_description\": \"Cloud DevOps Engineer to manage Kubernetes (EKS) clusters, author Terraform infrastructure as code, build GitHub Actions CI/CD pipelines, and configure Prometheus/Grafana monitoring.\",\n",
+                "            \"candidate_name\": \"Lucas Meyer\",\n",
+                "            \"resume_text\": \"Linux systems administrator with 4 years experience managing Azure VMs, writing Bash automation scripts, and containerizing internal tools with Docker.\",\n",
+                "            \"match_score\": 0.71,\n",
+                "            \"label\": \"Good Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0009\",\n",
+                "            \"job_title\": \"Cloud DevOps Engineer\",\n",
+                "            \"job_description\": \"Cloud DevOps Engineer to manage Kubernetes (EKS) clusters, author Terraform infrastructure as code, build GitHub Actions CI/CD pipelines, and configure Prometheus/Grafana monitoring.\",\n",
+                "            \"candidate_name\": \"Jessica Taylor\",\n",
+                "            \"resume_text\": \"UI/UX designer with 3 years experience creating wireframes in Figma and coding landing pages with HTML5, CSS3, and JavaScript.\",\n",
+                "            \"match_score\": 0.22,\n",
+                "            \"label\": \"Low Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0010\",\n",
+                "            \"job_title\": \"Senior Data Engineer\",\n",
+                "            \"job_description\": \"Senior Data Engineer to build batch and streaming data pipelines with Python, Apache Spark, and SQL. Manage Airflow DAGs and architect data models in Snowflake.\",\n",
+                "            \"candidate_name\": \"Ananya Gupta\",\n",
+                "            \"resume_text\": \"Data Engineer with 4.5 years experience building PySpark data pipelines processing 3TB/day into Snowflake. Orchestrated 60+ Airflow DAGs with custom operators.\",\n",
+                "            \"match_score\": 0.94,\n",
+                "            \"label\": \"Strong Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0011\",\n",
+                "            \"job_title\": \"Senior Data Engineer\",\n",
+                "            \"job_description\": \"Senior Data Engineer to build batch and streaming data pipelines with Python, Apache Spark, and SQL. Manage Airflow DAGs and architect data models in Snowflake.\",\n",
+                "            \"candidate_name\": \"Rohan Deshmukh\",\n",
+                "            \"resume_text\": \"BI Analyst with 4 years writing advanced SQL queries, building Tableau executive dashboards, and doing basic data wrangling in Python with Pandas.\",\n",
+                "            \"match_score\": 0.67,\n",
+                "            \"label\": \"Moderate Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0012\",\n",
+                "            \"job_title\": \"Senior Backend Engineer (Go)\",\n",
+                "            \"job_description\": \"Backend Engineer to build high-throughput microservices in Go (Golang), implement gRPC interfaces, Kafka event streams, and optimize PostgreSQL databases.\",\n",
+                "            \"candidate_name\": \"Dmitri Volkov\",\n",
+                "            \"resume_text\": \"Distributed systems engineer with 5 years building high-performance Go microservices. Specialized in event-driven streaming with Kafka, gRPC, and PostgreSQL.\",\n",
+                "            \"match_score\": 0.96,\n",
+                "            \"label\": \"Strong Match\"\n",
+                "        },\n",
+                "        {\n",
+                "            \"id\": \"PAIR-0013\",\n",
+                "            \"job_title\": \"Senior Backend Engineer (Go)\",\n",
+                "            \"job_description\": \"Backend Engineer to build high-throughput microservices in Go (Golang), implement gRPC interfaces, Kafka event streams, and optimize PostgreSQL databases.\",\n",
+                "            \"candidate_name\": \"Amina Bello\",\n",
+                "            \"resume_text\": \"Backend developer with 4 years building enterprise microservices in Java, Spring Boot, and Kafka. Working on Go personal projects.\",\n",
+                "            \"match_score\": 0.72,\n",
+                "            \"label\": \"Good Match\"\n",
+                "        }\n",
+                "    ]\n",
+                "    df = pd.DataFrame(synthetic_data)\n",
+                "    df.to_csv(dataset_file, index=False)\n",
+                "else:\n",
+                "    df = pd.read_csv(dataset_file)\n",
+                "\n",
+                "print(f\"✅ Successfully loaded dataset with {len(df)} samples!\")\n",
+                "df[['job_title', 'candidate_name', 'match_score', 'label']].head()"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "### 📊 Inspecting the Score Distribution\n",
+                "Let's see the distribution of match scores across roles."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import matplotlib.pyplot as plt\n",
+                "\n",
+                "plt.figure(figsize=(8, 4))\n",
+                "plt.hist(df['match_score'], bins=8, color='#6366f1', edgecolor='black', alpha=0.8)\n",
+                "plt.title('Distribution of JD-Resume Match Scores', fontsize=13, fontweight='bold')\n",
+                "plt.xlabel('Match Score (0.0 to 1.0)')\n",
+                "plt.ylabel('Count')\n",
+                "plt.grid(axis='y', alpha=0.3)\n",
+                "plt.show()"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 🧬 Step 3: Preparing Input Data for Sentence-Transformers\n",
+                "Sentence-Transformers requires `InputExample` objects where:\n",
+                "- `texts = [job_description, resume_text]`\n",
+                "- `label = float(match_score)` (continuous similarity from 0.0 to 1.0)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "from sentence_transformers import InputExample\n",
+                "from sklearn.model_selection import train_test_split\n",
+                "from torch.utils.data import DataLoader\n",
+                "\n",
+                "# Train / Validation Split (80% train, 20% validation)\n",
+                "train_df, val_df = train_test_split(df, test_size=0.2, random_state=42)\n",
+                "\n",
+                "train_examples = [\n",
+                "    InputExample(texts=[row['job_description'], row['resume_text']], label=float(row['match_score']))\n",
+                "    for _, row in train_df.iterrows()\n",
+                "]\n",
+                "\n",
+                "val_examples = [\n",
+                "    InputExample(texts=[row['job_description'], row['resume_text']], label=float(row['match_score']))\n",
+                "    for _, row in val_df.iterrows()\n",
+                "]\n",
+                "\n",
+                "# Create PyTorch DataLoader\n",
+                "train_dataloader = DataLoader(train_examples, shuffle=True, batch_size=4)\n",
+                "\n",
+                "print(f\"Train samples: {len(train_examples)}\")\n",
+                "print(f\"Validation samples: {len(val_examples)}\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 🤖 Step 4: Initializing the Bi-Encoder Model & Loss\n",
+                "We use `sentence-transformers/all-MiniLM-L6-v2`:\n",
+                "- Highly optimized 6-layer MiniLM model.\n",
+                "- 384-dimensional dense vectors.\n",
+                "- Fast inference (over 1000 sentences/sec on T4 GPU).\n",
+                "- **Loss Function**: `losses.CosineSimilarityLoss(model)` minimizes Mean Squared Error between the cosine similarity of the embeddings and the target score."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "from sentence_transformers import SentenceTransformer, losses, evaluation\n",
+                "\n",
+                "MODEL_NAME = 'sentence-transformers/all-MiniLM-L6-v2'\n",
+                "print(f\"Loading base model: {MODEL_NAME}...\")\n",
+                "model = SentenceTransformer(MODEL_NAME)\n",
+                "\n",
+                "# Loss Function: CosineSimilarityLoss for continuous score regression (0.0 to 1.0)\n",
+                "train_loss = losses.CosineSimilarityLoss(model)\n",
+                "\n",
+                "# Evaluator for monitoring validation performance during training\n",
+                "evaluator = evaluation.EmbeddingSimilarityEvaluator.from_input_examples(\n",
+                "    val_examples,\n",
+                "    name='jd-resume-eval',\n",
+                "    show_progress_bar=False\n",
+                ")\n",
+                "\n",
+                "print(\"✅ Model and Evaluator initialized successfully!\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 🏋️ Step 5: Fine-Tuning the Model on Colab GPU\n",
+                "Now we run the training loop using `model.fit()`. On a Colab T4 GPU, 4 epochs take **less than 60 seconds**!"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import math\n",
+                "\n",
+                "num_epochs = 4\n",
+                "warmup_steps = math.ceil(len(train_dataloader) * num_epochs * 0.1)  # 10% warmup\n",
+                "output_dir = './talentai_jd_matcher_model'\n",
+                "\n",
+                "print(f\"Starting fine-tuning for {num_epochs} epochs...\")\n",
+                "\n",
+                "model.fit(\n",
+                "    train_objectives=[(train_dataloader, train_loss)],\n",
+                "    evaluator=evaluator,\n",
+                "    epochs=num_epochs,\n",
+                "    evaluation_steps=20,\n",
+                "    warmup_steps=warmup_steps,\n",
+                "    output_path=output_dir,\n",
+                "    show_progress_bar=True\n",
+                ")\n",
+                "\n",
+                "print(f\"\\n🎉 Training Complete! Fine-tuned model saved to: {output_dir}\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 🧪 Step 6: Testing & Evaluating Predictions\n",
+                "Let's load our newly fine-tuned model and test it on validation samples to inspect predicted vs actual match scores."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "from sentence_transformers import util\n",
+                "\n",
+                "# Load best saved checkpoint\n",
+                "best_model = SentenceTransformer(output_dir)\n",
+                "\n",
+                "print(\"=\" * 85)\n",
+                "print(f\"{'Candidate':<20} | {'Expected':<10} | {'Model Pred':<12} | {'Difference':<10} | Status\")\n",
+                "print(\"=\" * 85)\n",
+                "\n",
+                "for _, row in val_df.iterrows():\n",
+                "    # Encode JD and Resume into vectors\n",
+                "    jd_emb = best_model.encode(row['job_description'], convert_to_tensor=True)\n",
+                "    res_emb = best_model.encode(row['resume_text'], convert_to_tensor=True)\n",
+                "    \n",
+                "    # Compute Cosine Similarity\n",
+                "    pred_score = util.cos_sim(jd_emb, res_emb).item()\n",
+                "    expected = float(row['match_score'])\n",
+                "    diff = abs(pred_score - expected)\n",
+                "    status = \"✅ Close\" if diff < 0.20 else \"⚠️ Gap\"\n",
+                "    \n",
+                "    print(f\"{row['candidate_name']:<20} | {expected:<10.2f} | {pred_score:<12.2f} | {diff:<10.2f} | {status}\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 🏆 Step 7: Live Demonstration - Matching & Ranking Resumes for a New JD\n",
+                "Now let's simulate the real recruiter experience! We provide a brand-new Job Description and rank 4 candidates from 1st to 4th place."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "def rank_candidates(job_description, candidates_list, model):\n",
+                "    \"\"\"\n",
+                "    Encodes the job description once, encodes all candidates, and ranks them by cosine similarity.\n",
+                "    \"\"\"\n",
+                "    jd_embedding = model.encode(job_description, convert_to_tensor=True)\n",
+                "    \n",
+                "    ranked_results = []\n",
+                "    for cand in candidates_list:\n",
+                "        resume_emb = model.encode(cand['resume'], convert_to_tensor=True)\n",
+                "        similarity = util.cos_sim(jd_embedding, resume_emb).item()\n",
+                "        score_percent = round(similarity * 100, 1)\n",
+                "        \n",
+                "        ranked_results.append({\n",
+                "            'name': cand['name'],\n",
+                "            'role': cand.get('role', 'Candidate'),\n",
+                "            'similarity_score': similarity,\n",
+                "            'match_percent': f\"{score_percent}%\"\n",
+                "        })\n",
+                "    \n",
+                "    # Sort descending by similarity score\n",
+                "    ranked_results.sort(key=lambda x: x['similarity_score'], reverse=True)\n",
+                "    return ranked_results\n",
+                "\n",
+                "# Target Job Description\n",
+                "new_jd = \"\"\"\n",
+                "Looking for a Senior Machine Learning Engineer with 4+ years experience fine-tuning LLMs and transformers using PyTorch. Must have production experience building vector search with pgvector/Pinecone and deploying low-latency FastAPI endpoints on Docker.\n",
+                "\"\"\"\n",
+                "\n",
+                "# Sample candidate pool\n",
+                "test_candidates = [\n",
+                "    {\n",
+                "        'name': 'Aarav Sharma',\n",
+                "        'role': 'Senior ML Engineer',\n",
+                "        'resume': 'Machine Learning Engineer with 4 years experience. Fine-tuned BERT and LLMs in PyTorch. Implemented vector search with pgvector and deployed Dockerized FastAPI services.'\n",
+                "    },\n",
+                "    {\n",
+                "        'name': 'Marcus Vance',\n",
+                "        'role': 'Backend Developer',\n",
+                "        'resume': 'Backend Python developer with 3 years building Django REST APIs, PostgreSQL queries, and basic Scikit-learn data processing.'\n",
+                "    },\n",
+                "    {\n",
+                "        'name': 'Priya Nair',\n",
+                "        'role': 'Data Scientist',\n",
+                "        'resume': 'Data Scientist with 3.5 years experience in predictive modeling with Python, TensorFlow, and Scikit-learn. Familiar with FastAPI and Docker.'\n",
+                "    },\n",
+                "    {\n",
+                "        'name': 'Emily Watson',\n",
+                "        'role': 'Digital Marketer',\n",
+                "        'resume': 'Digital marketing specialist with 4 years experience optimizing WordPress landing pages, SEO campaigns, and Google Analytics.'\n",
+                "    }\n",
+                "]\n",
+                "\n",
+                "results = rank_candidates(new_jd, test_candidates, best_model)\n",
+                "\n",
+                "print(\"\\n🎯 Candidate Rankings for the Machine Learning Role:\")\n",
+                "print(\"-\" * 60)\n",
+                "medals = ['🥇 #1', '🥈 #2', '🥉 #3', '  #4']\n",
+                "for i, res in enumerate(results):\n",
+                "    print(f\"{medals[i]} {res['name']} ({res['role']}) -> Match Score: {res['match_percent']}\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 🚀 Step 8: Deploying as a FastAPI Microservice\n",
+                "Here is how to serve the trained model with FastAPI so your TalentAI React app can call it via HTTP POST!"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# Example FastAPI server snippet (save as server.py in your backend)\n",
+                "fastapi_code = '''\n",
+                "from fastapi import FastAPI\n",
+                "from pydantic import BaseModel\n",
+                "from sentence_transformers import SentenceTransformer, util\n",
+                "from typing import List\n",
+                "\n",
+                "app = FastAPI(title=\"TalentAI Matching Service\")\n",
+                "model = SentenceTransformer(\"./talentai_jd_matcher_model\")\n",
+                "\n",
+                "class CandidateItem(BaseModel):\n",
+                "    id: str\n",
+                "    name: str\n",
+                "    resume_text: str\n",
+                "\n",
+                "class MatchRequest(BaseModel):\n",
+                "    job_description: str\n",
+                "    candidates: List[CandidateItem]\n",
+                "\n",
+                "@app.post(\"/api/match-and-rank\")\n",
+                "def match_and_rank(req: MatchRequest):\n",
+                "    jd_emb = model.encode(req.job_description, convert_to_tensor=True)\n",
+                "    ranked = []\n",
+                "    for c in req.candidates:\n",
+                "        res_emb = model.encode(c.resume_text, convert_to_tensor=True)\n",
+                "        sim = util.cos_sim(jd_emb, res_emb).item()\n",
+                "        score = round(sim * 100, 1)\n",
+                "        ranked.append({\"id\": c.id, \"name\": c.name, \"score\": score})\n",
+                "    \n",
+                "    ranked.sort(key=lambda x: x[\"score\"], reverse=True)\n",
+                "    return {\"ranked_candidates\": ranked}\n",
+                "'''\n",
+                "\n",
+                "with open('serve_model.py', 'w') as f:\n",
+                "    f.write(fastapi_code)\n",
+                "\n",
+                "print(\"✅ Saved serve_model.py microservice script!\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "### 📦 Step 9: Download Your Fine-Tuned Model\n",
+                "Run this cell to zip your trained model so you can download it to your local machine or upload to Google Drive / Hugging Face Hub."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "!zip -r talentai_jd_matcher_model.zip ./talentai_jd_matcher_model\n",
+                "\n",
+                "try:\n",
+                "    from google.colab import files\n",
+                "    files.download('talentai_jd_matcher_model.zip')\n",
+                "    print(\"✅ Download started!\")\n",
+                "except Exception as e:\n",
+                "    print(\"Model zipped. You can download talentai_jd_matcher_model.zip from the Colab file explorer on the left.\")"
+            ]
+        }
+    ]
+
+    notebook_content = {
+        "cells": cells,
+        "metadata": {
+            "colab": {
+                "provenance": [],
+                "gpuType": "T4"
+            },
+            "accelerator": "GPU",
+            "language_info": {
+                "name": "python"
+            }
+        },
+        "nbformat": 4,
+        "nbformat_minor": 0
+    }
+
+    target_path = os.path.join(os.path.dirname(__file__), "JD_Resume_Matching_Model_Training.ipynb")
+    with open(target_path, "w", encoding="utf-8") as f:
+        json.dump(notebook_content, f, indent=2, ensure_ascii=False)
+
+    print(f"Created notebook at: {target_path}")
+
+if __name__ == "__main__":
+    create_notebook()

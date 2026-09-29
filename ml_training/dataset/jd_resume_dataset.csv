@@ -1,0 +1,1125 @@
+id,job_title,job_description,required_skills,candidate_name,resume_text,candidate_skills,matched_skills,missing_skills,match_score,label
+PAIR-0001,Machine Learning Engineer,"Job Title: Machine Learning Engineer
+Department: Applied AI Research
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Machine Learning Engineer to design, build, and deploy production ML systems. You will work on natural language processing, semantic search, and recommendation systems using modern deep learning frameworks.
+
+Responsibilities:
+- Train and fine-tune transformer models using PyTorch and Hugging Face.
+- Build vector search and embedding indexing pipelines with vector databases.
+- Develop low-latency inference REST APIs using FastAPI and containerize services with Docker.
+- Implement automated model evaluation, A/B testing, and MLOps monitoring.
+
+Required Skills:
+- Python, PyTorch, Scikit-learn, Hugging Face Transformers, NLP.
+- Experience with Docker, FastAPI, and relational or NoSQL databases.
+- Strong understanding of linear algebra, probability, and loss functions.",Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,Aarav Sharma,"Aarav Sharma - Machine Learning Engineer
+Email: aarav.sharma@example.com | GitHub: github.com/aarav-ml
+
+Summary:
+Applied Machine Learning Engineer with 4 years of experience building and deploying NLP models and transformer pipelines. Experienced in fine-tuning BERT and Llama models, building vector search engines with pgvector, and deploying scalable microservices with FastAPI and Docker.
+
+Experience:
+Senior ML Engineer at CogniTech (2022 - Present)
+- Fine-tuned transformer models using PyTorch and Hugging Face for semantic document search, achieving 91% Top-3 retrieval accuracy.
+- Built low-latency inference service handling 5M requests/day using FastAPI, Docker, and Kubernetes on AWS.
+- Designed vector embedding pipelines using Scikit-learn and FAISS for candidate-job matching.
+
+ML Engineer at DataFlow Labs (2020 - 2022)
+- Implemented text classification and named-entity recognition (NER) pipelines with PyTorch and Spacy.
+- Containerized training jobs and automated model tracking with MLflow.
+
+Skills:
+Languages & Frameworks: Python, PyTorch, Scikit-learn, Hugging Face, Transformers, FastAPI, Docker, PostgreSQL, NLP, LangChain.",Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; PostgreSQL; LangChain,Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,,0.94,Strong Match
+PAIR-0002,Machine Learning Engineer,"Job Title: Machine Learning Engineer
+Department: Applied AI Research
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Machine Learning Engineer to design, build, and deploy production ML systems. You will work on natural language processing, semantic search, and recommendation systems using modern deep learning frameworks.
+
+Responsibilities:
+- Train and fine-tune transformer models using PyTorch and Hugging Face.
+- Build vector search and embedding indexing pipelines with vector databases.
+- Develop low-latency inference REST APIs using FastAPI and containerize services with Docker.
+- Implement automated model evaluation, A/B testing, and MLOps monitoring.
+
+Required Skills:
+- Python, PyTorch, Scikit-learn, Hugging Face Transformers, NLP.
+- Experience with Docker, FastAPI, and relational or NoSQL databases.
+- Strong understanding of linear algebra, probability, and loss functions.",Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,Priya Nair,"Priya Nair - Data Scientist & ML Practitioner
+Email: priya.nair@example.com
+
+Summary:
+Data Scientist with 3.5 years of experience in predictive analytics and computer vision. Strong background in Python, TensorFlow, and classical ML algorithms. Looking to transition into core NLP and transformer systems.
+
+Experience:
+Data Scientist at InsightAI (2021 - Present)
+- Built predictive models using Python, Scikit-learn, and TensorFlow with automated pipelines.
+- Deployed prediction microservices using FastAPI and Docker.
+- Collaborated with engineering to integrate models into relational databases (PostgreSQL).
+
+Skills:
+Python, TensorFlow, Scikit-learn, Docker, FastAPI, Pandas, NumPy, SQL, OpenCV.",Python; TensorFlow; Scikit-learn; Docker; FastAPI; Pandas; SQL,Python; NLP; FastAPI; Docker; Scikit-learn,PyTorch; Hugging Face; Transformers,0.78,Good Match
+PAIR-0003,Machine Learning Engineer,"Job Title: Machine Learning Engineer
+Department: Applied AI Research
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Machine Learning Engineer to design, build, and deploy production ML systems. You will work on natural language processing, semantic search, and recommendation systems using modern deep learning frameworks.
+
+Responsibilities:
+- Train and fine-tune transformer models using PyTorch and Hugging Face.
+- Build vector search and embedding indexing pipelines with vector databases.
+- Develop low-latency inference REST APIs using FastAPI and containerize services with Docker.
+- Implement automated model evaluation, A/B testing, and MLOps monitoring.
+
+Required Skills:
+- Python, PyTorch, Scikit-learn, Hugging Face Transformers, NLP.
+- Experience with Docker, FastAPI, and relational or NoSQL databases.
+- Strong understanding of linear algebra, probability, and loss functions.",Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,Marcus Vance,"Marcus Vance - Python Backend Developer
+Email: marcus.v@example.com
+
+Summary:
+Backend developer with 3 years of experience building web applications using Python and Django. Basic exposure to Scikit-learn for simple tabular regressions, but primarily focused on CRUD APIs and database optimization.
+
+Experience:
+Backend Engineer at WebForge (2021 - Present)
+- Developed RESTful APIs with Python and Django.
+- Managed PostgreSQL database migrations and Docker containerization.
+- Experimented with basic Python NLP libraries (NLTK) for sentiment tagging.
+
+Skills:
+Python, Django, PostgreSQL, Docker, Git, REST APIs, Basic Scikit-learn.",Python; Django; PostgreSQL; JavaScript; Docker,Python; NLP; Docker; Scikit-learn,PyTorch; Hugging Face; Transformers; FastAPI,0.52,Moderate Match
+PAIR-0004,Machine Learning Engineer,"Job Title: Machine Learning Engineer
+Department: Applied AI Research
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Machine Learning Engineer to design, build, and deploy production ML systems. You will work on natural language processing, semantic search, and recommendation systems using modern deep learning frameworks.
+
+Responsibilities:
+- Train and fine-tune transformer models using PyTorch and Hugging Face.
+- Build vector search and embedding indexing pipelines with vector databases.
+- Develop low-latency inference REST APIs using FastAPI and containerize services with Docker.
+- Implement automated model evaluation, A/B testing, and MLOps monitoring.
+
+Required Skills:
+- Python, PyTorch, Scikit-learn, Hugging Face Transformers, NLP.
+- Experience with Docker, FastAPI, and relational or NoSQL databases.
+- Strong understanding of linear algebra, probability, and loss functions.",Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,Emily Watson,"Emily Watson - Digital Marketer & Web Specialist
+Email: emily.watson@example.com
+
+Summary:
+Digital marketing specialist with 4 years of experience optimizing WordPress blogs, landing page conversion rates, and on-page SEO.
+
+Experience:
+Web Content Coordinator at MarketReach (2020 - Present)
+- Maintained client websites using WordPress, PHP, and basic CSS.
+- Monitored Google Analytics and keyword rankings.
+
+Skills:
+WordPress, HTML5, CSS3, SEO, Copywriting, Google Analytics.",HTML; CSS; WordPress; PHP; SEO,,Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,0.22,Low Match
+PAIR-0005,Senior Full-Stack Engineer,"Job Title: Senior Full-Stack Engineer (React & Node.js)
+Department: Core Engineering
+Required Experience: 4+ years
+
+About The Role:
+We need a Senior Full-Stack Engineer to architect and build scalable web applications. You will be responsible for end-to-end development, from designing responsive React interfaces to building robust backend APIs with Node.js and PostgreSQL.
+
+Key Responsibilities:
+- Build modular, high-performance UI components with React, TypeScript, and Tailwind CSS.
+- Architect RESTful and GraphQL APIs using Node.js, Express, or NestJS.
+- Optimize database queries, schema design, and migrations with PostgreSQL.
+- Write unit and integration tests, containerize applications with Docker, and configure CI/CD.
+
+Required Skills:
+- React, TypeScript, Node.js, Express, PostgreSQL, Tailwind CSS, REST API, Git, Docker.",React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; REST API; Docker,Vikram Patel,"Vikram Patel - Senior Full-Stack Engineer
+Email: vikram.patel@example.com | Portfolio: vikramdev.io
+
+Summary:
+Full-Stack Engineer with 5 years of experience delivering SaaS products with React, TypeScript, and Node.js. Passionate about responsive UI, clean architecture, and PostgreSQL database performance.
+
+Experience:
+Senior Software Engineer at CloudScale (2021 - Present)
+- Led frontend redesign using React 18, TypeScript, and Tailwind CSS, increasing page load speed by 42%.
+- Engineered high-throughput microservices using Node.js, Express, and PostgreSQL, handling over 10k concurrent users.
+- Implemented Docker containerization and automated CI/CD deployments via GitHub Actions.
+
+Full-Stack Developer at NextGen Apps (2019 - 2021)
+- Built interactive dashboards with React and GraphQL.
+- Designed relational schemas and indexing strategies in PostgreSQL.
+
+Skills:
+React, TypeScript, Node.js, Express, PostgreSQL, Tailwind CSS, Docker, GraphQL, REST API, Git, Vitest.",React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; Docker; GraphQL; Git,React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; REST API; Docker,,0.96,Strong Match
+PAIR-0006,Senior Full-Stack Engineer,"Job Title: Senior Full-Stack Engineer (React & Node.js)
+Department: Core Engineering
+Required Experience: 4+ years
+
+About The Role:
+We need a Senior Full-Stack Engineer to architect and build scalable web applications. You will be responsible for end-to-end development, from designing responsive React interfaces to building robust backend APIs with Node.js and PostgreSQL.
+
+Key Responsibilities:
+- Build modular, high-performance UI components with React, TypeScript, and Tailwind CSS.
+- Architect RESTful and GraphQL APIs using Node.js, Express, or NestJS.
+- Optimize database queries, schema design, and migrations with PostgreSQL.
+- Write unit and integration tests, containerize applications with Docker, and configure CI/CD.
+
+Required Skills:
+- React, TypeScript, Node.js, Express, PostgreSQL, Tailwind CSS, REST API, Git, Docker.",React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; REST API; Docker,Chloe Bennett,"Chloe Bennett - Full Stack Developer (MERN)
+Email: chloe.bennett@example.com
+
+Summary:
+Full stack developer with 3.5 years of experience in the MERN stack (MongoDB, Express, React, Node.js). Strong at creating interactive user interfaces and RESTful web services. Familiar with TypeScript basics.
+
+Experience:
+Software Engineer at AppWorks (2021 - Present)
+- Developed dynamic single-page web applications with React and Redux.
+- Built backend APIs with Node.js, Express, and MongoDB.
+- Created styled interfaces using CSS3 and Bootstrap.
+
+Skills:
+React, JavaScript, Node.js, Express, MongoDB, REST APIs, Git, HTML5, CSS3.",React; JavaScript; Node.js; MongoDB; Express; CSS3,React; TypeScript; Node.js; Express; REST API,PostgreSQL; Tailwind CSS; Docker,0.74,Good Match
+PAIR-0007,Senior Full-Stack Engineer,"Job Title: Senior Full-Stack Engineer (React & Node.js)
+Department: Core Engineering
+Required Experience: 4+ years
+
+About The Role:
+We need a Senior Full-Stack Engineer to architect and build scalable web applications. You will be responsible for end-to-end development, from designing responsive React interfaces to building robust backend APIs with Node.js and PostgreSQL.
+
+Key Responsibilities:
+- Build modular, high-performance UI components with React, TypeScript, and Tailwind CSS.
+- Architect RESTful and GraphQL APIs using Node.js, Express, or NestJS.
+- Optimize database queries, schema design, and migrations with PostgreSQL.
+- Write unit and integration tests, containerize applications with Docker, and configure CI/CD.
+
+Required Skills:
+- React, TypeScript, Node.js, Express, PostgreSQL, Tailwind CSS, REST API, Git, Docker.",React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; REST API; Docker,Daniel Kim,"Daniel Kim - Java / Enterprise Developer
+Email: daniel.kim@example.com
+
+Summary:
+Enterprise software engineer with 4 years of experience building microservices with Java and Spring Boot. Secondary experience with Angular on internal portals.
+
+Experience:
+Java Developer at FinSys (2020 - Present)
+- Developed core banking APIs using Java, Spring Boot, and MySQL.
+- Maintained legacy frontend components built with Angular.
+
+Skills:
+Java, Spring Boot, MySQL, Angular, Docker, REST API, Git.",Java; Spring Boot; MySQL; Angular; Docker,REST API; Docker,React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS,0.5,Moderate Match
+PAIR-0008,Senior Full-Stack Engineer,"Job Title: Senior Full-Stack Engineer (React & Node.js)
+Department: Core Engineering
+Required Experience: 4+ years
+
+About The Role:
+We need a Senior Full-Stack Engineer to architect and build scalable web applications. You will be responsible for end-to-end development, from designing responsive React interfaces to building robust backend APIs with Node.js and PostgreSQL.
+
+Key Responsibilities:
+- Build modular, high-performance UI components with React, TypeScript, and Tailwind CSS.
+- Architect RESTful and GraphQL APIs using Node.js, Express, or NestJS.
+- Optimize database queries, schema design, and migrations with PostgreSQL.
+- Write unit and integration tests, containerize applications with Docker, and configure CI/CD.
+
+Required Skills:
+- React, TypeScript, Node.js, Express, PostgreSQL, Tailwind CSS, REST API, Git, Docker.",React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; REST API; Docker,Samantha Reed,"Samantha Reed - QA & Test Analyst
+Email: samantha.reed@example.com
+
+Summary:
+Quality Assurance Analyst with 3 years of experience in manual test case execution, regression testing, and bug reporting in Jira.
+
+Experience:
+QA Tester at SoftVerify (2021 - Present)
+- Wrote detailed bug reports and validated fix releases.
+- Tested REST APIs using Postman.
+
+Skills:
+Manual Testing, Regression Testing, Jira, Postman, TestRail.",Manual Testing; Jira; Selenium; Postman,REST API,React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; Docker,0.2,Low Match
+PAIR-0009,Cloud DevOps & Platform Engineer,"Job Title: Cloud DevOps & Platform Engineer
+Department: Infrastructure & Reliability
+Required Experience: 4+ years
+
+About The Role:
+We are looking for a Cloud DevOps Engineer to scale cloud infrastructure, optimize Kubernetes deployments, and maintain automated CI/CD pipelines across AWS environments.
+
+Key Responsibilities:
+- Architect and manage multi-region Kubernetes (EKS) clusters.
+- Write modular Infrastructure as Code using Terraform.
+- Build automated, secure CI/CD pipelines with GitHub Actions or GitLab CI.
+- Monitor system reliability, latency, and uptime using Prometheus and Grafana.
+
+Required Skills:
+- Kubernetes, Docker, AWS, Terraform, CI/CD, Linux, Prometheus, Grafana, Python/Bash.",Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,Rahul Verma,"Rahul Verma - Senior DevOps & Platform Engineer
+Email: rahul.v@example.com | Certifications: CKA, AWS Solutions Architect
+
+Summary:
+DevOps Engineer with 5+ years of experience specializing in Kubernetes orchestration, Terraform automation, and AWS cloud architecture. Proven record of achieving 99.99% uptime.
+
+Experience:
+Lead DevOps Engineer at InfraCloud (2021 - Present)
+- Provisioned and managed 12 production Kubernetes (EKS) clusters across AWS regions using Terraform.
+- Built reusable GitHub Actions CI/CD pipelines reducing deployment cycle time from 45m to 8m.
+- Configured Prometheus, Alertmanager, and Grafana dashboards for real-time observability.
+
+Cloud Engineer at SystemsCo (2019 - 2021)
+- Automated AWS EC2 and RDS deployments using Terraform and Ansible.
+- Containerized legacy applications using Docker and migrated to Linux hosts.
+
+Skills:
+Kubernetes, Docker, AWS, Terraform, CI/CD, Linux, Prometheus, Grafana, Helm, Python, Bash, Git.",Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana; Python; Helm,Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,,0.95,Strong Match
+PAIR-0010,Cloud DevOps & Platform Engineer,"Job Title: Cloud DevOps & Platform Engineer
+Department: Infrastructure & Reliability
+Required Experience: 4+ years
+
+About The Role:
+We are looking for a Cloud DevOps Engineer to scale cloud infrastructure, optimize Kubernetes deployments, and maintain automated CI/CD pipelines across AWS environments.
+
+Key Responsibilities:
+- Architect and manage multi-region Kubernetes (EKS) clusters.
+- Write modular Infrastructure as Code using Terraform.
+- Build automated, secure CI/CD pipelines with GitHub Actions or GitLab CI.
+- Monitor system reliability, latency, and uptime using Prometheus and Grafana.
+
+Required Skills:
+- Kubernetes, Docker, AWS, Terraform, CI/CD, Linux, Prometheus, Grafana, Python/Bash.",Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,Lucas Meyer,"Lucas Meyer - Systems Administrator & Cloud Specialist
+Email: lucas.meyer@example.com
+
+Summary:
+Systems administrator with 4 years of experience managing Linux servers and Azure cloud environments. Strong containerization skills with Docker; currently expanding Kubernetes knowledge.
+
+Experience:
+SysAdmin at GlobalNet (2020 - Present)
+- Managed Linux (Ubuntu/RHEL) server fleets and internal Azure VMs.
+- Created automated backup scripts and CI/CD pipelines using GitLab CI.
+- Containerized internal services with Docker.
+
+Skills:
+Linux, Docker, Azure, CI/CD, Bash scripting, Git, Nginx.",Docker; Linux; Azure; CI/CD; Bash; Git,Kubernetes; Docker; CI/CD; Linux,AWS; Terraform; Prometheus; Grafana,0.72,Good Match
+PAIR-0011,Cloud DevOps & Platform Engineer,"Job Title: Cloud DevOps & Platform Engineer
+Department: Infrastructure & Reliability
+Required Experience: 4+ years
+
+About The Role:
+We are looking for a Cloud DevOps Engineer to scale cloud infrastructure, optimize Kubernetes deployments, and maintain automated CI/CD pipelines across AWS environments.
+
+Key Responsibilities:
+- Architect and manage multi-region Kubernetes (EKS) clusters.
+- Write modular Infrastructure as Code using Terraform.
+- Build automated, secure CI/CD pipelines with GitHub Actions or GitLab CI.
+- Monitor system reliability, latency, and uptime using Prometheus and Grafana.
+
+Required Skills:
+- Kubernetes, Docker, AWS, Terraform, CI/CD, Linux, Prometheus, Grafana, Python/Bash.",Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,Jessica Taylor,"Jessica Taylor - UI/UX Designer & Frontend Developer
+Email: jessica.t@example.com
+
+Summary:
+Frontend designer with 3 years of experience turning Figma designs into responsive HTML, CSS, and basic React interfaces.
+
+Skills:
+Figma, UI/UX Design, HTML5, CSS3, JavaScript, React.",React; CSS3; JavaScript; Figma,,Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,0.38,Low Match
+PAIR-0012,Data Engineer / Analytics Specialist,"Job Title: Senior Data Engineer
+Department: Data Platform
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Senior Data Engineer to design, build, and optimize scalable batch and streaming data pipelines. You will partner with data scientists and analytics teams to provide clean, reliable data warehouses.
+
+Key Responsibilities:
+- Build ETL/ELT data pipelines using Python, Apache Spark, and SQL.
+- Orchestrate data workflows using Apache Airflow.
+- Architect data models in Snowflake, BigQuery, or Redshift.
+- Ensure data quality, schema enforcement, and lineage tracking.
+
+Required Skills:
+- Python, Apache Spark, SQL, Airflow, Snowflake, ETL, Data Warehousing, Docker.",Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing,Ananya Gupta,"Ananya Gupta - Senior Data Engineer
+Email: ananya.gupta@example.com
+
+Summary:
+Data Engineer with 4.5 years of experience building production data pipelines and cloud data warehouses. Expert in Apache Spark (PySpark), Airflow orchestration, and Snowflake modeling.
+
+Experience:
+Senior Data Engineer at DataMesh (2022 - Present)
+- Designed automated PySpark pipelines processing over 3TB of daily clickstream events into Snowflake.
+- Managed 60+ Airflow DAGs with custom operators and SLA alerts.
+- Implemented dbt models and schema tests reducing data anomalies by 75%.
+
+Data Engineer at FinData (2020 - 2022)
+- Built SQL ETL workflows on AWS Redshift and PostgreSQL.
+
+Skills:
+Python, PySpark, Apache Spark, SQL, Airflow, Snowflake, ETL, Data Warehousing, dbt, Docker, Git.",Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing; dbt; Docker,Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing,,0.93,Strong Match
+PAIR-0013,Data Engineer / Analytics Specialist,"Job Title: Senior Data Engineer
+Department: Data Platform
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Senior Data Engineer to design, build, and optimize scalable batch and streaming data pipelines. You will partner with data scientists and analytics teams to provide clean, reliable data warehouses.
+
+Key Responsibilities:
+- Build ETL/ELT data pipelines using Python, Apache Spark, and SQL.
+- Orchestrate data workflows using Apache Airflow.
+- Architect data models in Snowflake, BigQuery, or Redshift.
+- Ensure data quality, schema enforcement, and lineage tracking.
+
+Required Skills:
+- Python, Apache Spark, SQL, Airflow, Snowflake, ETL, Data Warehousing, Docker.",Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing,Rohan Deshmukh,"Rohan Deshmukh - Senior BI & Data Analyst
+Email: rohan.d@example.com
+
+Summary:
+Business Intelligence Analyst with 4 years of experience writing advanced SQL queries, building Tableau executive dashboards, and basic Python data processing with Pandas.
+
+Experience:
+BI Analyst at RetailPulse (2020 - Present)
+- Created interactive dashboards in Tableau and PowerBI.
+- Wrote complex SQL queries and stored procedures to aggregate business KPIs.
+
+Skills:
+SQL, Tableau, PowerBI, Python, Pandas, Excel, Data Analysis.",SQL; Python; Tableau; PowerBI; Pandas,Python; SQL,Spark; Airflow; Snowflake; ETL; Data Warehousing,0.68,Moderate Match
+PAIR-0014,Mobile iOS / Swift Engineer,"Job Title: Senior iOS Engineer
+Department: Consumer Mobile Apps
+Required Experience: 4+ years
+
+About The Role:
+We are seeking an experienced iOS Engineer to lead feature development on our flagship iOS app used by millions of daily users. You will write clean, testable Swift code and design smooth animations.
+
+Key Responsibilities:
+- Build performant native iOS interfaces using SwiftUI and UIKit.
+- Architect offline-first storage and syncing with CoreData or Realm.
+- Integrate RESTful APIs and real-time WebSockets.
+- Optimize app memory, launch time, and battery consumption.
+
+Required Skills:
+- Swift, SwiftUI, UIKit, CoreData, Xcode, REST API, Git, Unit Testing.",Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,Kavita Reddy,"Kavita Reddy - Senior iOS Developer
+Email: kavita.reddy@example.com
+
+Summary:
+iOS developer with 5 years of native app development experience. Deep expertise in Swift, SwiftUI, and declarative UI patterns with Combine.
+
+Experience:
+Senior iOS Engineer at AppVibe (2021 - Present)
+- Architected new consumer features in SwiftUI and UIKit.
+- Implemented persistent caching with CoreData and background sync.
+- Maintained 99.8% crash-free rate across 2M active devices.
+
+Skills:
+Swift, SwiftUI, UIKit, CoreData, Xcode, Combine, REST API, Unit Testing, Git.",Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing; Combine; Git,Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,,0.94,Strong Match
+PAIR-0015,Mobile iOS / Swift Engineer,"Job Title: Senior iOS Engineer
+Department: Consumer Mobile Apps
+Required Experience: 4+ years
+
+About The Role:
+We are seeking an experienced iOS Engineer to lead feature development on our flagship iOS app used by millions of daily users. You will write clean, testable Swift code and design smooth animations.
+
+Key Responsibilities:
+- Build performant native iOS interfaces using SwiftUI and UIKit.
+- Architect offline-first storage and syncing with CoreData or Realm.
+- Integrate RESTful APIs and real-time WebSockets.
+- Optimize app memory, launch time, and battery consumption.
+
+Required Skills:
+- Swift, SwiftUI, UIKit, CoreData, Xcode, REST API, Git, Unit Testing.",Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,Devin Brooks,"Devin Brooks - Cross-Platform Mobile Engineer
+Email: devin.b@example.com
+
+Summary:
+Mobile engineer with 3 years of experience building cross-platform apps with React Native. Understands mobile lifecycle; learning native Swift.
+
+Experience:
+Mobile Dev at FlexApps (2021 - Present)
+- Built iOS and Android apps using React Native and Expo.
+- Integrated REST APIs and push notifications.
+
+Skills:
+React Native, JavaScript, TypeScript, Redux, REST API, Git, Mobile UX.",React Native; JavaScript; TypeScript; Redux; REST API,Swift; REST API,SwiftUI; UIKit; CoreData; Xcode; Unit Testing,0.65,Moderate Match
+PAIR-0016,Mobile iOS / Swift Engineer,"Job Title: Senior iOS Engineer
+Department: Consumer Mobile Apps
+Required Experience: 4+ years
+
+About The Role:
+We are seeking an experienced iOS Engineer to lead feature development on our flagship iOS app used by millions of daily users. You will write clean, testable Swift code and design smooth animations.
+
+Key Responsibilities:
+- Build performant native iOS interfaces using SwiftUI and UIKit.
+- Architect offline-first storage and syncing with CoreData or Realm.
+- Integrate RESTful APIs and real-time WebSockets.
+- Optimize app memory, launch time, and battery consumption.
+
+Required Skills:
+- Swift, SwiftUI, UIKit, CoreData, Xcode, REST API, Git, Unit Testing.",Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,Alex Vance,"Alex Vance - Site Reliability Engineer
+Email: alex.vance@example.com
+
+Summary:
+SRE engineer specializing in Linux kernel tuning, Terraform infrastructure, and Kubernetes cluster operations. No mobile app experience.
+
+Skills:
+Kubernetes, Docker, Terraform, Linux, Prometheus, AWS.",Kubernetes; Docker; Terraform; Linux,,Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,0.18,Low Match
+PAIR-0017,Cybersecurity & Application Security Engineer,"Job Title: Application Security Engineer
+Department: InfoSec & Governance
+Required Experience: 3-5 years
+
+About The Role:
+We need an Application Security Engineer to secure our software development lifecycle (SDLC), conduct vulnerability assessments, and implement Zero-Trust access controls.
+
+Key Responsibilities:
+- Conduct static and dynamic application security testing (SAST/DAST).
+- Triage OWASP Top 10 vulnerabilities and advise developers on remediation.
+- Audit authentication and authorization flows (OAuth2, OIDC, JWT).
+- Implement automated container and dependency scanning in CI/CD.
+
+Required Skills:
+- Cybersecurity, OWASP, Penetration Testing, SAST/DAST, OAuth, Python, Linux.",Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Python; Linux,Zackary Stone,"Zackary Stone - Application Security Specialist
+Email: zack.stone@example.com | OSCP, CISSP
+
+Summary:
+Security engineer with 4.5 years of experience in vulnerability assessments, penetration testing, and securing cloud-native CI/CD pipelines.
+
+Experience:
+AppSec Engineer at CyberDefend (2021 - Present)
+- Performed SAST/DAST code reviews and penetration tests on microservices.
+- Remediated OWASP Top 10 vulnerabilities across web applications.
+- Built automated security gates into GitHub Actions with Python scripts.
+
+Skills:
+Cybersecurity, OWASP, Penetration Testing, SAST, DAST, OAuth, Burp Suite, Python, Linux, Docker.",Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Python; Linux; Burp Suite,Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Python; Linux,,0.95,Strong Match
+PAIR-0018,Cybersecurity & Application Security Engineer,"Job Title: Application Security Engineer
+Department: InfoSec & Governance
+Required Experience: 3-5 years
+
+About The Role:
+We need an Application Security Engineer to secure our software development lifecycle (SDLC), conduct vulnerability assessments, and implement Zero-Trust access controls.
+
+Key Responsibilities:
+- Conduct static and dynamic application security testing (SAST/DAST).
+- Triage OWASP Top 10 vulnerabilities and advise developers on remediation.
+- Audit authentication and authorization flows (OAuth2, OIDC, JWT).
+- Implement automated container and dependency scanning in CI/CD.
+
+Required Skills:
+- Cybersecurity, OWASP, Penetration Testing, SAST/DAST, OAuth, Python, Linux.",Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Python; Linux,Tariq Mansoor,"Tariq Mansoor - Network Security Administrator
+Email: tariq.m@example.com
+
+Summary:
+Network security admin with 3.5 years of experience configuring enterprise firewalls, VPNs, and monitoring Linux network traffic. Limited software code auditing experience.
+
+Skills:
+Linux, Network Security, Firewalls, Cisco, Python, Wireshark, TCP/IP.",Linux; Network Security; Firewalls; Python,Python; Linux,Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth,0.58,Moderate Match
+PAIR-0019,Backend Go / Microservices Engineer,"Job Title: Senior Backend Engineer (Go / Microservices)
+Department: Platform & Core Services
+Required Experience: 4+ years
+
+About The Role:
+Seeking an experienced Backend Engineer to build high-throughput distributed microservices in Go. You will architect gRPC communication, Kafka event streams, and PostgreSQL data stores.
+
+Key Responsibilities:
+- Design and maintain low-latency microservices in Go (Golang).
+- Implement asynchronous event-driven streaming with Apache Kafka.
+- Optimize database transactions and caching with PostgreSQL and Redis.
+- Instrument services with OpenTelemetry and Prometheus.
+
+Required Skills:
+- Go, Golang, Microservices, gRPC, Kafka, PostgreSQL, Redis, Docker, Git.",Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker,Dmitri Volkov,"Dmitri Volkov - Senior Go Backend Engineer
+Email: dmitri.volkov@example.com
+
+Summary:
+Distributed systems engineer with 5 years of experience writing high-performance Go microservices. Specialized in event-driven streaming with Kafka and gRPC.
+
+Experience:
+Senior Backend Engineer at StreamTech (2021 - Present)
+- Built real-time payment processing service in Go handling 25k transactions/second.
+- Designed gRPC interfaces and Kafka event streams with zero data loss.
+- Optimized PostgreSQL indexing and Redis cache layers for sub-5ms latencies.
+
+Skills:
+Go, Golang, Microservices, gRPC, Kafka, PostgreSQL, Redis, Docker, Kubernetes, Linux, Git.",Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker; Kubernetes,Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker,,0.96,Strong Match
+PAIR-0020,Backend Go / Microservices Engineer,"Job Title: Senior Backend Engineer (Go / Microservices)
+Department: Platform & Core Services
+Required Experience: 4+ years
+
+About The Role:
+Seeking an experienced Backend Engineer to build high-throughput distributed microservices in Go. You will architect gRPC communication, Kafka event streams, and PostgreSQL data stores.
+
+Key Responsibilities:
+- Design and maintain low-latency microservices in Go (Golang).
+- Implement asynchronous event-driven streaming with Apache Kafka.
+- Optimize database transactions and caching with PostgreSQL and Redis.
+- Instrument services with OpenTelemetry and Prometheus.
+
+Required Skills:
+- Go, Golang, Microservices, gRPC, Kafka, PostgreSQL, Redis, Docker, Git.",Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker,Amina Bello,"Amina Bello - Backend Software Engineer
+Email: amina.b@example.com
+
+Summary:
+Backend developer with 4 years of experience building microservices with Java, Spring Boot, and Kafka. Enthusiastic about transitioning full-time into Go.
+
+Skills:
+Java, Spring Boot, Kafka, PostgreSQL, Docker, Microservices, Git, Basic Go.",Java; Spring Boot; Kafka; PostgreSQL; Docker; Microservices,Go; Microservices; Kafka; PostgreSQL; Docker,Golang; gRPC; Redis,0.7,Good Match
+PAIR-0021,Machine Learning Engineer,"Job Title: Machine Learning Engineer
+Department: Applied AI Research
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Machine Learning Engineer to design, build, and deploy production ML systems. You will work on natural language processing, semantic search, and recommendation systems using modern deep learning frameworks.
+
+Responsibilities:
+- Train and fine-tune transformer models using PyTorch and Hugging Face.
+- Build vector search and embedding indexing pipelines with vector databases.
+- Develop low-latency inference REST APIs using FastAPI and containerize services with Docker.
+- Implement automated model evaluation, A/B testing, and MLOps monitoring.
+
+Required Skills:
+- Python, PyTorch, Scikit-learn, Hugging Face Transformers, NLP.
+- Experience with Docker, FastAPI, and relational or NoSQL databases.
+- Strong understanding of linear algebra, probability, and loss functions.",Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,Jessica Taylor (Cross-Domain),"Jessica Taylor - UI/UX Designer & Frontend Developer
+Email: jessica.t@example.com
+
+Summary:
+Frontend designer with 3 years of experience turning Figma designs into responsive HTML, CSS, and basic React interfaces.
+
+Skills:
+Figma, UI/UX Design, HTML5, CSS3, JavaScript, React.",React; CSS3; JavaScript; Figma,,Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,0.18,Low Match
+PAIR-0022,Machine Learning Engineer,"Job Title: Machine Learning Engineer
+Department: Applied AI Research
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Machine Learning Engineer to design, build, and deploy production ML systems. You will work on natural language processing, semantic search, and recommendation systems using modern deep learning frameworks.
+
+Responsibilities:
+- Train and fine-tune transformer models using PyTorch and Hugging Face.
+- Build vector search and embedding indexing pipelines with vector databases.
+- Develop low-latency inference REST APIs using FastAPI and containerize services with Docker.
+- Implement automated model evaluation, A/B testing, and MLOps monitoring.
+
+Required Skills:
+- Python, PyTorch, Scikit-learn, Hugging Face Transformers, NLP.
+- Experience with Docker, FastAPI, and relational or NoSQL databases.
+- Strong understanding of linear algebra, probability, and loss functions.",Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,Devin Brooks (Cross-Domain),"Devin Brooks - Cross-Platform Mobile Engineer
+Email: devin.b@example.com
+
+Summary:
+Mobile engineer with 3 years of experience building cross-platform apps with React Native. Understands mobile lifecycle; learning native Swift.
+
+Experience:
+Mobile Dev at FlexApps (2021 - Present)
+- Built iOS and Android apps using React Native and Expo.
+- Integrated REST APIs and push notifications.
+
+Skills:
+React Native, JavaScript, TypeScript, Redux, REST API, Git, Mobile UX.",React Native; JavaScript; TypeScript; Redux; REST API,,Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,0.12,Low Match
+PAIR-0023,Machine Learning Engineer,"Job Title: Machine Learning Engineer
+Department: Applied AI Research
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Machine Learning Engineer to design, build, and deploy production ML systems. You will work on natural language processing, semantic search, and recommendation systems using modern deep learning frameworks.
+
+Responsibilities:
+- Train and fine-tune transformer models using PyTorch and Hugging Face.
+- Build vector search and embedding indexing pipelines with vector databases.
+- Develop low-latency inference REST APIs using FastAPI and containerize services with Docker.
+- Implement automated model evaluation, A/B testing, and MLOps monitoring.
+
+Required Skills:
+- Python, PyTorch, Scikit-learn, Hugging Face Transformers, NLP.
+- Experience with Docker, FastAPI, and relational or NoSQL databases.
+- Strong understanding of linear algebra, probability, and loss functions.",Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; Scikit-learn,Amina Bello (Cross-Domain),"Amina Bello - Backend Software Engineer
+Email: amina.b@example.com
+
+Summary:
+Backend developer with 4 years of experience building microservices with Java, Spring Boot, and Kafka. Enthusiastic about transitioning full-time into Go.
+
+Skills:
+Java, Spring Boot, Kafka, PostgreSQL, Docker, Microservices, Git, Basic Go.",Java; Spring Boot; Kafka; PostgreSQL; Docker; Microservices,Docker,Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Scikit-learn,0.16,Low Match
+PAIR-0024,Senior Full-Stack Engineer,"Job Title: Senior Full-Stack Engineer (React & Node.js)
+Department: Core Engineering
+Required Experience: 4+ years
+
+About The Role:
+We need a Senior Full-Stack Engineer to architect and build scalable web applications. You will be responsible for end-to-end development, from designing responsive React interfaces to building robust backend APIs with Node.js and PostgreSQL.
+
+Key Responsibilities:
+- Build modular, high-performance UI components with React, TypeScript, and Tailwind CSS.
+- Architect RESTful and GraphQL APIs using Node.js, Express, or NestJS.
+- Optimize database queries, schema design, and migrations with PostgreSQL.
+- Write unit and integration tests, containerize applications with Docker, and configure CI/CD.
+
+Required Skills:
+- React, TypeScript, Node.js, Express, PostgreSQL, Tailwind CSS, REST API, Git, Docker.",React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; REST API; Docker,Dmitri Volkov (Cross-Domain),"Dmitri Volkov - Senior Go Backend Engineer
+Email: dmitri.volkov@example.com
+
+Summary:
+Distributed systems engineer with 5 years of experience writing high-performance Go microservices. Specialized in event-driven streaming with Kafka and gRPC.
+
+Experience:
+Senior Backend Engineer at StreamTech (2021 - Present)
+- Built real-time payment processing service in Go handling 25k transactions/second.
+- Designed gRPC interfaces and Kafka event streams with zero data loss.
+- Optimized PostgreSQL indexing and Redis cache layers for sub-5ms latencies.
+
+Skills:
+Go, Golang, Microservices, gRPC, Kafka, PostgreSQL, Redis, Docker, Kubernetes, Linux, Git.",Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker; Kubernetes,PostgreSQL; Docker,React; TypeScript; Node.js; Express; Tailwind CSS; REST API,0.23,Low Match
+PAIR-0025,Senior Full-Stack Engineer,"Job Title: Senior Full-Stack Engineer (React & Node.js)
+Department: Core Engineering
+Required Experience: 4+ years
+
+About The Role:
+We need a Senior Full-Stack Engineer to architect and build scalable web applications. You will be responsible for end-to-end development, from designing responsive React interfaces to building robust backend APIs with Node.js and PostgreSQL.
+
+Key Responsibilities:
+- Build modular, high-performance UI components with React, TypeScript, and Tailwind CSS.
+- Architect RESTful and GraphQL APIs using Node.js, Express, or NestJS.
+- Optimize database queries, schema design, and migrations with PostgreSQL.
+- Write unit and integration tests, containerize applications with Docker, and configure CI/CD.
+
+Required Skills:
+- React, TypeScript, Node.js, Express, PostgreSQL, Tailwind CSS, REST API, Git, Docker.",React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; REST API; Docker,Marcus Vance (Cross-Domain),"Marcus Vance - Python Backend Developer
+Email: marcus.v@example.com
+
+Summary:
+Backend developer with 3 years of experience building web applications using Python and Django. Basic exposure to Scikit-learn for simple tabular regressions, but primarily focused on CRUD APIs and database optimization.
+
+Experience:
+Backend Engineer at WebForge (2021 - Present)
+- Developed RESTful APIs with Python and Django.
+- Managed PostgreSQL database migrations and Docker containerization.
+- Experimented with basic Python NLP libraries (NLTK) for sentiment tagging.
+
+Skills:
+Python, Django, PostgreSQL, Docker, Git, REST APIs, Basic Scikit-learn.",Python; Django; PostgreSQL; JavaScript; Docker,PostgreSQL; Docker,React; TypeScript; Node.js; Express; Tailwind CSS; REST API,0.18,Low Match
+PAIR-0026,Senior Full-Stack Engineer,"Job Title: Senior Full-Stack Engineer (React & Node.js)
+Department: Core Engineering
+Required Experience: 4+ years
+
+About The Role:
+We need a Senior Full-Stack Engineer to architect and build scalable web applications. You will be responsible for end-to-end development, from designing responsive React interfaces to building robust backend APIs with Node.js and PostgreSQL.
+
+Key Responsibilities:
+- Build modular, high-performance UI components with React, TypeScript, and Tailwind CSS.
+- Architect RESTful and GraphQL APIs using Node.js, Express, or NestJS.
+- Optimize database queries, schema design, and migrations with PostgreSQL.
+- Write unit and integration tests, containerize applications with Docker, and configure CI/CD.
+
+Required Skills:
+- React, TypeScript, Node.js, Express, PostgreSQL, Tailwind CSS, REST API, Git, Docker.",React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; REST API; Docker,Emily Watson (Cross-Domain),"Emily Watson - Digital Marketer & Web Specialist
+Email: emily.watson@example.com
+
+Summary:
+Digital marketing specialist with 4 years of experience optimizing WordPress blogs, landing page conversion rates, and on-page SEO.
+
+Experience:
+Web Content Coordinator at MarketReach (2020 - Present)
+- Maintained client websites using WordPress, PHP, and basic CSS.
+- Monitored Google Analytics and keyword rankings.
+
+Skills:
+WordPress, HTML5, CSS3, SEO, Copywriting, Google Analytics.",HTML; CSS; WordPress; PHP; SEO,,React; TypeScript; Node.js; Express; PostgreSQL; Tailwind CSS; REST API; Docker,0.18,Low Match
+PAIR-0027,Cloud DevOps & Platform Engineer,"Job Title: Cloud DevOps & Platform Engineer
+Department: Infrastructure & Reliability
+Required Experience: 4+ years
+
+About The Role:
+We are looking for a Cloud DevOps Engineer to scale cloud infrastructure, optimize Kubernetes deployments, and maintain automated CI/CD pipelines across AWS environments.
+
+Key Responsibilities:
+- Architect and manage multi-region Kubernetes (EKS) clusters.
+- Write modular Infrastructure as Code using Terraform.
+- Build automated, secure CI/CD pipelines with GitHub Actions or GitLab CI.
+- Monitor system reliability, latency, and uptime using Prometheus and Grafana.
+
+Required Skills:
+- Kubernetes, Docker, AWS, Terraform, CI/CD, Linux, Prometheus, Grafana, Python/Bash.",Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,Tariq Mansoor (Cross-Domain),"Tariq Mansoor - Network Security Administrator
+Email: tariq.m@example.com
+
+Summary:
+Network security admin with 3.5 years of experience configuring enterprise firewalls, VPNs, and monitoring Linux network traffic. Limited software code auditing experience.
+
+Skills:
+Linux, Network Security, Firewalls, Cisco, Python, Wireshark, TCP/IP.",Linux; Network Security; Firewalls; Python,Linux,Kubernetes; Docker; AWS; Terraform; CI/CD; Prometheus; Grafana,0.19,Low Match
+PAIR-0028,Cloud DevOps & Platform Engineer,"Job Title: Cloud DevOps & Platform Engineer
+Department: Infrastructure & Reliability
+Required Experience: 4+ years
+
+About The Role:
+We are looking for a Cloud DevOps Engineer to scale cloud infrastructure, optimize Kubernetes deployments, and maintain automated CI/CD pipelines across AWS environments.
+
+Key Responsibilities:
+- Architect and manage multi-region Kubernetes (EKS) clusters.
+- Write modular Infrastructure as Code using Terraform.
+- Build automated, secure CI/CD pipelines with GitHub Actions or GitLab CI.
+- Monitor system reliability, latency, and uptime using Prometheus and Grafana.
+
+Required Skills:
+- Kubernetes, Docker, AWS, Terraform, CI/CD, Linux, Prometheus, Grafana, Python/Bash.",Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,Samantha Reed (Cross-Domain),"Samantha Reed - QA & Test Analyst
+Email: samantha.reed@example.com
+
+Summary:
+Quality Assurance Analyst with 3 years of experience in manual test case execution, regression testing, and bug reporting in Jira.
+
+Experience:
+QA Tester at SoftVerify (2021 - Present)
+- Wrote detailed bug reports and validated fix releases.
+- Tested REST APIs using Postman.
+
+Skills:
+Manual Testing, Regression Testing, Jira, Postman, TestRail.",Manual Testing; Jira; Selenium; Postman,,Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,0.18,Low Match
+PAIR-0029,Cloud DevOps & Platform Engineer,"Job Title: Cloud DevOps & Platform Engineer
+Department: Infrastructure & Reliability
+Required Experience: 4+ years
+
+About The Role:
+We are looking for a Cloud DevOps Engineer to scale cloud infrastructure, optimize Kubernetes deployments, and maintain automated CI/CD pipelines across AWS environments.
+
+Key Responsibilities:
+- Architect and manage multi-region Kubernetes (EKS) clusters.
+- Write modular Infrastructure as Code using Terraform.
+- Build automated, secure CI/CD pipelines with GitHub Actions or GitLab CI.
+- Monitor system reliability, latency, and uptime using Prometheus and Grafana.
+
+Required Skills:
+- Kubernetes, Docker, AWS, Terraform, CI/CD, Linux, Prometheus, Grafana, Python/Bash.",Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,Aarav Sharma (Cross-Domain),"Aarav Sharma - Machine Learning Engineer
+Email: aarav.sharma@example.com | GitHub: github.com/aarav-ml
+
+Summary:
+Applied Machine Learning Engineer with 4 years of experience building and deploying NLP models and transformer pipelines. Experienced in fine-tuning BERT and Llama models, building vector search engines with pgvector, and deploying scalable microservices with FastAPI and Docker.
+
+Experience:
+Senior ML Engineer at CogniTech (2022 - Present)
+- Fine-tuned transformer models using PyTorch and Hugging Face for semantic document search, achieving 91% Top-3 retrieval accuracy.
+- Built low-latency inference service handling 5M requests/day using FastAPI, Docker, and Kubernetes on AWS.
+- Designed vector embedding pipelines using Scikit-learn and FAISS for candidate-job matching.
+
+ML Engineer at DataFlow Labs (2020 - 2022)
+- Implemented text classification and named-entity recognition (NER) pipelines with PyTorch and Spacy.
+- Containerized training jobs and automated model tracking with MLflow.
+
+Skills:
+Languages & Frameworks: Python, PyTorch, Scikit-learn, Hugging Face, Transformers, FastAPI, Docker, PostgreSQL, NLP, LangChain.",Python; PyTorch; Hugging Face; Transformers; NLP; FastAPI; Docker; PostgreSQL; LangChain,Docker,Kubernetes; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana,0.25,Low Match
+PAIR-0030,Data Engineer / Analytics Specialist,"Job Title: Senior Data Engineer
+Department: Data Platform
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Senior Data Engineer to design, build, and optimize scalable batch and streaming data pipelines. You will partner with data scientists and analytics teams to provide clean, reliable data warehouses.
+
+Key Responsibilities:
+- Build ETL/ELT data pipelines using Python, Apache Spark, and SQL.
+- Orchestrate data workflows using Apache Airflow.
+- Architect data models in Snowflake, BigQuery, or Redshift.
+- Ensure data quality, schema enforcement, and lineage tracking.
+
+Required Skills:
+- Python, Apache Spark, SQL, Airflow, Snowflake, ETL, Data Warehousing, Docker.",Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing,Emily Watson (Cross-Domain),"Emily Watson - Digital Marketer & Web Specialist
+Email: emily.watson@example.com
+
+Summary:
+Digital marketing specialist with 4 years of experience optimizing WordPress blogs, landing page conversion rates, and on-page SEO.
+
+Experience:
+Web Content Coordinator at MarketReach (2020 - Present)
+- Maintained client websites using WordPress, PHP, and basic CSS.
+- Monitored Google Analytics and keyword rankings.
+
+Skills:
+WordPress, HTML5, CSS3, SEO, Copywriting, Google Analytics.",HTML; CSS; WordPress; PHP; SEO,,Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing,0.11,Low Match
+PAIR-0031,Data Engineer / Analytics Specialist,"Job Title: Senior Data Engineer
+Department: Data Platform
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Senior Data Engineer to design, build, and optimize scalable batch and streaming data pipelines. You will partner with data scientists and analytics teams to provide clean, reliable data warehouses.
+
+Key Responsibilities:
+- Build ETL/ELT data pipelines using Python, Apache Spark, and SQL.
+- Orchestrate data workflows using Apache Airflow.
+- Architect data models in Snowflake, BigQuery, or Redshift.
+- Ensure data quality, schema enforcement, and lineage tracking.
+
+Required Skills:
+- Python, Apache Spark, SQL, Airflow, Snowflake, ETL, Data Warehousing, Docker.",Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing,Marcus Vance (Cross-Domain),"Marcus Vance - Python Backend Developer
+Email: marcus.v@example.com
+
+Summary:
+Backend developer with 3 years of experience building web applications using Python and Django. Basic exposure to Scikit-learn for simple tabular regressions, but primarily focused on CRUD APIs and database optimization.
+
+Experience:
+Backend Engineer at WebForge (2021 - Present)
+- Developed RESTful APIs with Python and Django.
+- Managed PostgreSQL database migrations and Docker containerization.
+- Experimented with basic Python NLP libraries (NLTK) for sentiment tagging.
+
+Skills:
+Python, Django, PostgreSQL, Docker, Git, REST APIs, Basic Scikit-learn.",Python; Django; PostgreSQL; JavaScript; Docker,Python,Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing,0.2,Low Match
+PAIR-0032,Data Engineer / Analytics Specialist,"Job Title: Senior Data Engineer
+Department: Data Platform
+Required Experience: 3-5 years
+
+About The Role:
+We are seeking a Senior Data Engineer to design, build, and optimize scalable batch and streaming data pipelines. You will partner with data scientists and analytics teams to provide clean, reliable data warehouses.
+
+Key Responsibilities:
+- Build ETL/ELT data pipelines using Python, Apache Spark, and SQL.
+- Orchestrate data workflows using Apache Airflow.
+- Architect data models in Snowflake, BigQuery, or Redshift.
+- Ensure data quality, schema enforcement, and lineage tracking.
+
+Required Skills:
+- Python, Apache Spark, SQL, Airflow, Snowflake, ETL, Data Warehousing, Docker.",Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing,Dmitri Volkov (Cross-Domain),"Dmitri Volkov - Senior Go Backend Engineer
+Email: dmitri.volkov@example.com
+
+Summary:
+Distributed systems engineer with 5 years of experience writing high-performance Go microservices. Specialized in event-driven streaming with Kafka and gRPC.
+
+Experience:
+Senior Backend Engineer at StreamTech (2021 - Present)
+- Built real-time payment processing service in Go handling 25k transactions/second.
+- Designed gRPC interfaces and Kafka event streams with zero data loss.
+- Optimized PostgreSQL indexing and Redis cache layers for sub-5ms latencies.
+
+Skills:
+Go, Golang, Microservices, gRPC, Kafka, PostgreSQL, Redis, Docker, Kubernetes, Linux, Git.",Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker; Kubernetes,,Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing,0.16,Low Match
+PAIR-0033,Mobile iOS / Swift Engineer,"Job Title: Senior iOS Engineer
+Department: Consumer Mobile Apps
+Required Experience: 4+ years
+
+About The Role:
+We are seeking an experienced iOS Engineer to lead feature development on our flagship iOS app used by millions of daily users. You will write clean, testable Swift code and design smooth animations.
+
+Key Responsibilities:
+- Build performant native iOS interfaces using SwiftUI and UIKit.
+- Architect offline-first storage and syncing with CoreData or Realm.
+- Integrate RESTful APIs and real-time WebSockets.
+- Optimize app memory, launch time, and battery consumption.
+
+Required Skills:
+- Swift, SwiftUI, UIKit, CoreData, Xcode, REST API, Git, Unit Testing.",Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,Marcus Vance (Cross-Domain),"Marcus Vance - Python Backend Developer
+Email: marcus.v@example.com
+
+Summary:
+Backend developer with 3 years of experience building web applications using Python and Django. Basic exposure to Scikit-learn for simple tabular regressions, but primarily focused on CRUD APIs and database optimization.
+
+Experience:
+Backend Engineer at WebForge (2021 - Present)
+- Developed RESTful APIs with Python and Django.
+- Managed PostgreSQL database migrations and Docker containerization.
+- Experimented with basic Python NLP libraries (NLTK) for sentiment tagging.
+
+Skills:
+Python, Django, PostgreSQL, Docker, Git, REST APIs, Basic Scikit-learn.",Python; Django; PostgreSQL; JavaScript; Docker,,Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,0.2,Low Match
+PAIR-0034,Mobile iOS / Swift Engineer,"Job Title: Senior iOS Engineer
+Department: Consumer Mobile Apps
+Required Experience: 4+ years
+
+About The Role:
+We are seeking an experienced iOS Engineer to lead feature development on our flagship iOS app used by millions of daily users. You will write clean, testable Swift code and design smooth animations.
+
+Key Responsibilities:
+- Build performant native iOS interfaces using SwiftUI and UIKit.
+- Architect offline-first storage and syncing with CoreData or Realm.
+- Integrate RESTful APIs and real-time WebSockets.
+- Optimize app memory, launch time, and battery consumption.
+
+Required Skills:
+- Swift, SwiftUI, UIKit, CoreData, Xcode, REST API, Git, Unit Testing.",Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,Rohan Deshmukh (Cross-Domain),"Rohan Deshmukh - Senior BI & Data Analyst
+Email: rohan.d@example.com
+
+Summary:
+Business Intelligence Analyst with 4 years of experience writing advanced SQL queries, building Tableau executive dashboards, and basic Python data processing with Pandas.
+
+Experience:
+BI Analyst at RetailPulse (2020 - Present)
+- Created interactive dashboards in Tableau and PowerBI.
+- Wrote complex SQL queries and stored procedures to aggregate business KPIs.
+
+Skills:
+SQL, Tableau, PowerBI, Python, Pandas, Excel, Data Analysis.",SQL; Python; Tableau; PowerBI; Pandas,,Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,0.16,Low Match
+PAIR-0035,Mobile iOS / Swift Engineer,"Job Title: Senior iOS Engineer
+Department: Consumer Mobile Apps
+Required Experience: 4+ years
+
+About The Role:
+We are seeking an experienced iOS Engineer to lead feature development on our flagship iOS app used by millions of daily users. You will write clean, testable Swift code and design smooth animations.
+
+Key Responsibilities:
+- Build performant native iOS interfaces using SwiftUI and UIKit.
+- Architect offline-first storage and syncing with CoreData or Realm.
+- Integrate RESTful APIs and real-time WebSockets.
+- Optimize app memory, launch time, and battery consumption.
+
+Required Skills:
+- Swift, SwiftUI, UIKit, CoreData, Xcode, REST API, Git, Unit Testing.",Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,Chloe Bennett (Cross-Domain),"Chloe Bennett - Full Stack Developer (MERN)
+Email: chloe.bennett@example.com
+
+Summary:
+Full stack developer with 3.5 years of experience in the MERN stack (MongoDB, Express, React, Node.js). Strong at creating interactive user interfaces and RESTful web services. Familiar with TypeScript basics.
+
+Experience:
+Software Engineer at AppWorks (2021 - Present)
+- Developed dynamic single-page web applications with React and Redux.
+- Built backend APIs with Node.js, Express, and MongoDB.
+- Created styled interfaces using CSS3 and Bootstrap.
+
+Skills:
+React, JavaScript, Node.js, Express, MongoDB, REST APIs, Git, HTML5, CSS3.",React; JavaScript; Node.js; MongoDB; Express; CSS3,,Swift; SwiftUI; UIKit; CoreData; Xcode; REST API; Unit Testing,0.19,Low Match
+PAIR-0036,Cybersecurity & Application Security Engineer,"Job Title: Application Security Engineer
+Department: InfoSec & Governance
+Required Experience: 3-5 years
+
+About The Role:
+We need an Application Security Engineer to secure our software development lifecycle (SDLC), conduct vulnerability assessments, and implement Zero-Trust access controls.
+
+Key Responsibilities:
+- Conduct static and dynamic application security testing (SAST/DAST).
+- Triage OWASP Top 10 vulnerabilities and advise developers on remediation.
+- Audit authentication and authorization flows (OAuth2, OIDC, JWT).
+- Implement automated container and dependency scanning in CI/CD.
+
+Required Skills:
+- Cybersecurity, OWASP, Penetration Testing, SAST/DAST, OAuth, Python, Linux.",Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Python; Linux,Priya Nair (Cross-Domain),"Priya Nair - Data Scientist & ML Practitioner
+Email: priya.nair@example.com
+
+Summary:
+Data Scientist with 3.5 years of experience in predictive analytics and computer vision. Strong background in Python, TensorFlow, and classical ML algorithms. Looking to transition into core NLP and transformer systems.
+
+Experience:
+Data Scientist at InsightAI (2021 - Present)
+- Built predictive models using Python, Scikit-learn, and TensorFlow with automated pipelines.
+- Deployed prediction microservices using FastAPI and Docker.
+- Collaborated with engineering to integrate models into relational databases (PostgreSQL).
+
+Skills:
+Python, TensorFlow, Scikit-learn, Docker, FastAPI, Pandas, NumPy, SQL, OpenCV.",Python; TensorFlow; Scikit-learn; Docker; FastAPI; Pandas; SQL,Python,Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Linux,0.17,Low Match
+PAIR-0037,Cybersecurity & Application Security Engineer,"Job Title: Application Security Engineer
+Department: InfoSec & Governance
+Required Experience: 3-5 years
+
+About The Role:
+We need an Application Security Engineer to secure our software development lifecycle (SDLC), conduct vulnerability assessments, and implement Zero-Trust access controls.
+
+Key Responsibilities:
+- Conduct static and dynamic application security testing (SAST/DAST).
+- Triage OWASP Top 10 vulnerabilities and advise developers on remediation.
+- Audit authentication and authorization flows (OAuth2, OIDC, JWT).
+- Implement automated container and dependency scanning in CI/CD.
+
+Required Skills:
+- Cybersecurity, OWASP, Penetration Testing, SAST/DAST, OAuth, Python, Linux.",Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Python; Linux,Rahul Verma (Cross-Domain),"Rahul Verma - Senior DevOps & Platform Engineer
+Email: rahul.v@example.com | Certifications: CKA, AWS Solutions Architect
+
+Summary:
+DevOps Engineer with 5+ years of experience specializing in Kubernetes orchestration, Terraform automation, and AWS cloud architecture. Proven record of achieving 99.99% uptime.
+
+Experience:
+Lead DevOps Engineer at InfraCloud (2021 - Present)
+- Provisioned and managed 12 production Kubernetes (EKS) clusters across AWS regions using Terraform.
+- Built reusable GitHub Actions CI/CD pipelines reducing deployment cycle time from 45m to 8m.
+- Configured Prometheus, Alertmanager, and Grafana dashboards for real-time observability.
+
+Cloud Engineer at SystemsCo (2019 - 2021)
+- Automated AWS EC2 and RDS deployments using Terraform and Ansible.
+- Containerized legacy applications using Docker and migrated to Linux hosts.
+
+Skills:
+Kubernetes, Docker, AWS, Terraform, CI/CD, Linux, Prometheus, Grafana, Helm, Python, Bash, Git.",Kubernetes; Docker; AWS; Terraform; CI/CD; Linux; Prometheus; Grafana; Python; Helm,Python; Linux,Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth,0.31,Low Match
+PAIR-0038,Cybersecurity & Application Security Engineer,"Job Title: Application Security Engineer
+Department: InfoSec & Governance
+Required Experience: 3-5 years
+
+About The Role:
+We need an Application Security Engineer to secure our software development lifecycle (SDLC), conduct vulnerability assessments, and implement Zero-Trust access controls.
+
+Key Responsibilities:
+- Conduct static and dynamic application security testing (SAST/DAST).
+- Triage OWASP Top 10 vulnerabilities and advise developers on remediation.
+- Audit authentication and authorization flows (OAuth2, OIDC, JWT).
+- Implement automated container and dependency scanning in CI/CD.
+
+Required Skills:
+- Cybersecurity, OWASP, Penetration Testing, SAST/DAST, OAuth, Python, Linux.",Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Python; Linux,Amina Bello (Cross-Domain),"Amina Bello - Backend Software Engineer
+Email: amina.b@example.com
+
+Summary:
+Backend developer with 4 years of experience building microservices with Java, Spring Boot, and Kafka. Enthusiastic about transitioning full-time into Go.
+
+Skills:
+Java, Spring Boot, Kafka, PostgreSQL, Docker, Microservices, Git, Basic Go.",Java; Spring Boot; Kafka; PostgreSQL; Docker; Microservices,,Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Python; Linux,0.19,Low Match
+PAIR-0039,Backend Go / Microservices Engineer,"Job Title: Senior Backend Engineer (Go / Microservices)
+Department: Platform & Core Services
+Required Experience: 4+ years
+
+About The Role:
+Seeking an experienced Backend Engineer to build high-throughput distributed microservices in Go. You will architect gRPC communication, Kafka event streams, and PostgreSQL data stores.
+
+Key Responsibilities:
+- Design and maintain low-latency microservices in Go (Golang).
+- Implement asynchronous event-driven streaming with Apache Kafka.
+- Optimize database transactions and caching with PostgreSQL and Redis.
+- Instrument services with OpenTelemetry and Prometheus.
+
+Required Skills:
+- Go, Golang, Microservices, gRPC, Kafka, PostgreSQL, Redis, Docker, Git.",Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker,Alex Vance (Cross-Domain),"Alex Vance - Site Reliability Engineer
+Email: alex.vance@example.com
+
+Summary:
+SRE engineer specializing in Linux kernel tuning, Terraform infrastructure, and Kubernetes cluster operations. No mobile app experience.
+
+Skills:
+Kubernetes, Docker, Terraform, Linux, Prometheus, AWS.",Kubernetes; Docker; Terraform; Linux,Docker,Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis,0.13,Low Match
+PAIR-0040,Backend Go / Microservices Engineer,"Job Title: Senior Backend Engineer (Go / Microservices)
+Department: Platform & Core Services
+Required Experience: 4+ years
+
+About The Role:
+Seeking an experienced Backend Engineer to build high-throughput distributed microservices in Go. You will architect gRPC communication, Kafka event streams, and PostgreSQL data stores.
+
+Key Responsibilities:
+- Design and maintain low-latency microservices in Go (Golang).
+- Implement asynchronous event-driven streaming with Apache Kafka.
+- Optimize database transactions and caching with PostgreSQL and Redis.
+- Instrument services with OpenTelemetry and Prometheus.
+
+Required Skills:
+- Go, Golang, Microservices, gRPC, Kafka, PostgreSQL, Redis, Docker, Git.",Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker,Zackary Stone (Cross-Domain),"Zackary Stone - Application Security Specialist
+Email: zack.stone@example.com | OSCP, CISSP
+
+Summary:
+Security engineer with 4.5 years of experience in vulnerability assessments, penetration testing, and securing cloud-native CI/CD pipelines.
+
+Experience:
+AppSec Engineer at CyberDefend (2021 - Present)
+- Performed SAST/DAST code reviews and penetration tests on microservices.
+- Remediated OWASP Top 10 vulnerabilities across web applications.
+- Built automated security gates into GitHub Actions with Python scripts.
+
+Skills:
+Cybersecurity, OWASP, Penetration Testing, SAST, DAST, OAuth, Burp Suite, Python, Linux, Docker.",Cybersecurity; OWASP; Penetration Testing; SAST; DAST; OAuth; Python; Linux; Burp Suite,,Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker,0.13,Low Match
+PAIR-0041,Backend Go / Microservices Engineer,"Job Title: Senior Backend Engineer (Go / Microservices)
+Department: Platform & Core Services
+Required Experience: 4+ years
+
+About The Role:
+Seeking an experienced Backend Engineer to build high-throughput distributed microservices in Go. You will architect gRPC communication, Kafka event streams, and PostgreSQL data stores.
+
+Key Responsibilities:
+- Design and maintain low-latency microservices in Go (Golang).
+- Implement asynchronous event-driven streaming with Apache Kafka.
+- Optimize database transactions and caching with PostgreSQL and Redis.
+- Instrument services with OpenTelemetry and Prometheus.
+
+Required Skills:
+- Go, Golang, Microservices, gRPC, Kafka, PostgreSQL, Redis, Docker, Git.",Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis; Docker,Ananya Gupta (Cross-Domain),"Ananya Gupta - Senior Data Engineer
+Email: ananya.gupta@example.com
+
+Summary:
+Data Engineer with 4.5 years of experience building production data pipelines and cloud data warehouses. Expert in Apache Spark (PySpark), Airflow orchestration, and Snowflake modeling.
+
+Experience:
+Senior Data Engineer at DataMesh (2022 - Present)
+- Designed automated PySpark pipelines processing over 3TB of daily clickstream events into Snowflake.
+- Managed 60+ Airflow DAGs with custom operators and SLA alerts.
+- Implemented dbt models and schema tests reducing data anomalies by 75%.
+
+Data Engineer at FinData (2020 - 2022)
+- Built SQL ETL workflows on AWS Redshift and PostgreSQL.
+
+Skills:
+Python, PySpark, Apache Spark, SQL, Airflow, Snowflake, ETL, Data Warehousing, dbt, Docker, Git.",Python; Spark; SQL; Airflow; Snowflake; ETL; Data Warehousing; dbt; Docker,Docker,Go; Golang; Microservices; gRPC; Kafka; PostgreSQL; Redis,0.26,Low Match
