@@ -222,11 +222,8 @@ def create_notebook():
                 "            \"match_score\": 0.72,\n",
                 "            \"label\": \"Good Match\"\n",
                 "        }\n",
-                "    ]\n",
-                "    df = pd.DataFrame(synthetic_data)\n",
-                "    df.to_csv(dataset_file, index=False)\n",
-                "else:\n",
-                "    df = pd.read_csv(dataset_file)\n",
+                "        ]\n",
+                "        df = pd.DataFrame(synthetic_data)\n",
                 "\n",
                 "print(f\"✅ Successfully loaded dataset with {len(df)} samples!\")\n",
                 "df[['job_title', 'candidate_name', 'match_score', 'label']].head()"
